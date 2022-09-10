@@ -1,6 +1,8 @@
 import logging
 import os
 import sys
+from dotenv import load_dotenv
+
 
 from tt_bot import TamTamBot
 
@@ -12,6 +14,7 @@ log.setLevel(logging.INFO)
 
 
 def run():
+    load_dotenv()
     tg_token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if tg_token is None:
         print("env var TELEGRAM_BOT_TOKEN must be set")
