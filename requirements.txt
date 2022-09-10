@@ -2,3 +2,4 @@ webp~=0.1.4
 Pillow~=9.2.0
 requests~=2.28.1
 aiohttp~=3.8.1
+python-dotenv==0.10.0
