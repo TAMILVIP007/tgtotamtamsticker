@@ -258,4 +258,4 @@ class TamTamBot:
     def run(self):
         app = web.Application()
         app.add_routes([web.post("/", self.proceed)])
-        web.run_app(app, port=int(os.environ.get("PORT")))
+        web.run_app(app, port=int(os.environ.get("PORT", 443)))
