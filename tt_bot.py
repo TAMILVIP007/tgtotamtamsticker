@@ -115,7 +115,8 @@ class TamTamBot:
             ))
 
         tg_set_name = update.message.body.text
-
+        if tg_set_name.startswith("/"):
+            return 
         tg_set = self.tg_client.get_sticker_pack_by_name(tg_set_name)
         if tg_set is None:
             self.send_message(
